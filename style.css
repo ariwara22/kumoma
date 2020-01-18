@@ -1,0 +1,165 @@
+/*ボディ*/
+body {
+    background:#eaf4fc;
+    font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック','メイリオ', Meiryo,YuGothic,'Yu Gothic','ＭＳ Ｐゴシック','MS PGothic'
+}
+/*.navigation h1 {*/
+/*    display: inline;*/
+/*    list-style-type: none;*/
+/*}*/
+
+/*ナビ*/
+.navigation li {
+    display: inline;
+    list-style-type: none;
+    padding: 10px;
+
+}
+/*ヘッダ*/
+header {
+    display:block;  /*古めのブラウザ対策のため、一応ブロックレベルに*/
+    padding:15px;
+    background:#17184b;
+    color:white;
+    opacity:0.8;
+    /*position: fixed;            !* ヘッダーの固定 *!*/
+}
+/*見出し*/
+h1 {display:inline;}
+h2 {
+    /*線の種類（実線） 太さ 色*/
+    background: #17184b;
+    padding: 5px 15px;
+    border-radius: 0 10px 0 10px;
+    color: #fff;
+    opacity:0.8;
+    margin: 10px;
+}
+/*メインコンテンツ*/
+main {
+    padding:15px;
+    /*margin:30px 0 ;*/
+    background:#ffffff;
+    color: #333333;
+}
+div .contents {
+    margin: 30px !important;
+}
+.contents >p {
+    margin: 0 20px;
+}
+.contents >div {
+    margin: 0 20px;
+}
+
+/*リンク*/
+a:link { color: white; }
+a:visited { color: white; }
+a:hover { color: gray; }
+a:active { color: #eeeeee; }
+a {
+    text-decoration: none;
+}
+/*サイト名*/
+.site_name {
+    font-size: 20px;
+    font-weight:bold ;
+}
+/*更新情報*/
+div #new {
+    margin: 30px;
+    padding: 0.5em 1em;
+    width: 50%;
+    height: 100px;
+    overflow: auto;
+    border: double 5px #17184b;
+    opacity:0.8;
+}
+#new pre {
+    margin: 0;
+    padding: 0;
+}
+
+/*トップに戻るボタン*/
+#page_top{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    background: #17184b;
+    opacity: 0.6;
+    border-radius: 50%;
+}
+#page_top a{
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+}
+#page_top a::before{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f0d8';
+    font-size: 25px;
+    color: #fff;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: -5px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+}
+
+/*フッター*/
+footer {
+    padding: 30px;
+    float: right;
+}
+
+/*全体*/
+.hidden_box {
+    margin: 2em 0;/*前後の余白*/
+    padding: 0;
+}
+
+/*ボタン装飾*/
+.hidden_box label {
+    /*padding: 15px;*/
+    /*font-weight: bold;*/
+    /*border: solid 2px black;*/
+    cursor :pointer;
+}
+
+/*ボタンホバー時*/
+.hidden_box label:hover {
+    background: #efefef;
+}
+
+/*チェックは見えなくする*/
+.hidden_box input {
+    display: none;
+}
+
+/*中身を非表示にしておく*/
+.hidden_box .hidden_show {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+/*クリックで中身表示*/
+.hidden_box input:checked ~ .hidden_show {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+}
+.hidden_box input:checked ~ .hidden_show dl {
+    margin: 10px 10px;
+}
